@@ -90,7 +90,7 @@
     left: 50%;
     margin: 0 auto;
     max-width: 960px;
-    width: 50%;
+    width: 60%;
     -webkit-transform: translate(-50%, -55%);
     -ms-transform: translate(-50%, -55%);
     transform: translate(-50%, -55%);
@@ -234,6 +234,8 @@
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
   section { width: 768px; }
+
+  h1 { font-size: 40px; }
   #form {
     width: 80%;
     top: 50px;
@@ -244,7 +246,7 @@
 
   .field { margin: 0 0 50px 0; }
 
-  label {
+  .field label {
     position: absolute;
     top: -45px;
     display: inline-block;
@@ -255,7 +257,7 @@
     color: #4797c9;
   }
 
-  input[type=text] {
+  .field input[type=text] {
     padding: 20px;
   }
 }
