@@ -1,26 +1,46 @@
 $(function() {
   var secretInput = $('#secret');
-  secretInput.bind('input', function() {
-    var secretHex = $('#secret').val();
-    var valid = !/[^0123456789abcdef]+/i.test(secretHex);
-    if (!valid) {
-      console.log('invalid key');
+  secretInput.bind('input', secretKeyChanged);
+
+  function isValidHex(str) {
+    return !/[^0123456789abcdef]+/i.test(str);
+  }
+
+  function pad(str, ch, len) {
+    while (str.length < len) {
+      str = ch + str;
+    }
+    return str;
+  }
+
+  function secretKeyChanged() {
+    var secretKeyHex = $('#secret').val();
+    if (!isValidHex(secretKeyHex)) {
+      console.error('Invalid Secret Key');
       return;
     }
 
-    while (secretHex.length < 64) {
-      secretHex = '0' + secretHex;
-    }
+    secretKeyHex = pad(secretKeyHex, '0', 64);
+    var secretKeyBytes = Crypto.util.hexToBytes(secretKeyHex);
 
-    var secretBytes = Crypto.util.hexToBytes(secretHex);
-    var extended = [128].concat(secretBytes);
+    var privateKey = privateKeyFromSecretKey(secretKeyBytes);
+    var publicKey = publicKeyFromSecretKey(secretKeyBytes);
+
+    $('#private').val(privateKey);
+    $('#public').val(publicKey);
+  }
+
+  function privateKeyFromSecretKey(secretKey) {
+    var extended = [128].concat(secretKey);
     var hashed = Crypto.SHA256(Crypto.SHA256(extended, {asBytes: true}), {asBytes: true});
     var checksum = hashed.slice(0, 4);
-    var full_extended = extended.concat(checksum);
-    var private_key = Bitcoin.Base58.encode(full_extended);
-    $('#private').val(private_key);
+    var fullExtended = extended.concat(checksum);
+    var privateKey = Bitcoin.Base58.encode(fullExtended);
+    return privateKey;
+  }
 
-    var eckey = new Bitcoin.ECKey(secretBytes);
+  function publicKeyFromSecretKey(secretKey) {
+    var eckey = new Bitcoin.ECKey(secretKey);
     var curve = getSECCurveByName('secp256k1');
     var curvePoint = curve.getG().multiply(eckey.priv);
     var x = curvePoint.getX().toBigInteger();
@@ -33,6 +53,6 @@ $(function() {
     var checksum = hashedThrice.slice(0, 4);
     var fullExtended = hashedOnce.concat(checksum);
     var publicKey = Bitcoin.Base58.encode(fullExtended);
-    $('#public').val(publicKey);
-  });
+    return publicKey;
+  }
 });
