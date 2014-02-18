@@ -144,8 +144,8 @@
 
     button {
         position: relative;
-        top: -2px;
-        padding: 16px 30px 15px 30px;
+        top: -1px;
+        padding: 17px 30px 18px 30px;
         border: none;
         border-radius: 6px;
         background: #4797c9;
@@ -157,7 +157,7 @@
         font-size: 14px;
         text-transform: uppercase;
         font-weight: 700;
-        box-shadow: 0 4px 0 #00538e;
+        /*box-shadow: 0 3px 0 #00538e;*/
         outline: none;
         margin: 0;
         transition: background 0.2s ease-in-out;
@@ -166,11 +166,6 @@
     button:hover {
         background: #408cbc;
         cursor: pointer;
-    }
-
-    button:active {
-        top: 2px;
-        box-shadow: none;
     }
 
     label {
