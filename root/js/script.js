@@ -1,4 +1,11 @@
 $(function() {
+
+  $( document ).ready(function() {
+      $('#coin-selector').on('click', function () {
+        $('#currency-list').toggleClass('active');
+      });
+  });
+
   // seed the random number generator
   rng_seed_time();
 

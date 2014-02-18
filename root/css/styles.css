@@ -97,9 +97,9 @@
     margin: 0 0 30px 0;
   }
 
-  .show-selected {
+  #coin-selector {
     width: 200px;
-    border: 1px solid #f9f9f9;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 15px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -107,14 +107,17 @@
     letter-spacing: 1px;
     display: inline-block;
     margin: 0 20px 20px 0;
-
+    transition: all 0.1s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
-  .show-selected h2 {
+  #coin-selector h2 {
     position: relative;
   }
 
-  .show-selected h2:after {
+  #coin-selector h2:after {
     position: absolute;
     top: -3px;
     right: 0px;
@@ -122,15 +125,40 @@
     font-size: 15px;
   }
 
-  .show-selected:hover {
+  #coin-selector:hover {
     cursor: pointer;
+    border: 1px solid #f9f9f9;
   }
 
-  #currency-select {
+  #currency-list {
     position: absolute;
-    top: 5px;
-    display: none;
+    top: 165px;
+    left: 0;
+    min-width: 232px;
+    visibility: hidden;
+    background: #f9f9f9;
+    color: #4797c9;
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   }
+
+  #currency-list.active {
+      opacity: 1;
+      top: 155px;
+      visibility: visible;
+      transition: all 0.2s ease-in-out;
+  }
+
+  #currency-list li {
+      padding: 15px 30px;
+      transition: all 0.2s ease-in-out;
+  }
+
+  #currency-list li:hover { opacity: 0.6; }
 
   button {
     position: relative;
@@ -158,6 +186,12 @@
     cursor: pointer;
   }
 
+  button:active {
+    -moz-box-shadow: inset 0px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 2px rgba(0, 0, 0, 0.2);
+  }
+
   .field label {
     position: absolute;
     text-transform: uppercase;
@@ -174,6 +208,9 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     color: #4797c9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
 
@@ -266,5 +303,5 @@
     @media only screen and (max-width: 479px) {
       section { width: 300px; }
 
-      .show-selected { width: 80%; }
+      #coin-selector { width: 80%; }
     }
