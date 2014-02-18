@@ -1,11 +1,5 @@
-/*  Bitcoin
-  Sarah Hum
-  February 2014
-*/
-
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-
 
 /* CSS Resets
 ------------------------------------------------------------ */
@@ -72,7 +66,6 @@
     margin: 0 auto;
   }
 
-
 /* Form Field
 ------------------------------------------------------------ */
   h1 {
@@ -80,7 +73,6 @@
     font-size: 60px;
     margin: 0 0 30px 0;
   }
-
 
 /* Form
 ------------------------------------------------------------ */
@@ -219,58 +211,57 @@
     color: #ccc;
   }
 
-
 /* Media Queries
 ------------------------------------------------------------ */
 
 /* Smaller than standard 960 (devices and browsers)
 @media only screen and (max-width: 959px) { } */
 
-/* Bigger than 960 */
-@media only screen and (min-width: 1300px) {
-  section { width: 1280px; }
-}
+    /* Bigger than 960 */
+    @media only screen and (min-width: 1300px) {
+      section { width: 1280px; }
+    }
 
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
-  section { width: 768px; }
+    /* Tablet Portrait size to standard 960 (devices and browsers) */
+    @media only screen and (max-width: 959px) {
+      section { width: 768px; }
 
-  h1 { font-size: 40px; }
-  #form {
-    width: 80%;
-    top: 50px;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
+      h1 { font-size: 40px; }
+      #form {
+        width: 80%;
+        top: 50px;
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+      }
 
-  .field { margin: 0 0 50px 0; }
+      .field { margin: 0 0 50px 0; }
 
-  .field label {
-    position: absolute;
-    top: -45px;
-    display: inline-block;
-    margin: 0 0 10px 0;
-    background: none;
-    z-index: 1;
-    padding: 0;
-    color: #4797c9;
-  }
+      .field label {
+        position: absolute;
+        top: -45px;
+        display: inline-block;
+        margin: 0 0 10px 0;
+        background: none;
+        z-index: 1;
+        padding: 0;
+        color: #4797c9;
+      }
 
-  .field input[type=text] {
-    padding: 20px;
-  }
-}
+      .field input[type=text] {
+        padding: 20px;
+      }
+    }
 
-/* All Mobile Sizes (devices and browser)
-@media only screen and (max-width: 767px) { }*/
+    /* All Mobile Sizes (devices and browser)
+    @media only screen and (max-width: 767px) { }*/
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (max-width: 767px) {
-  section { width: 480px; }
-}
+    /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+    @media only screen and (max-width: 767px) {
+      section { width: 480px; }
+    }
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
-  section { width: 300px; }
-}
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    @media only screen and (max-width: 479px) {
+      section { width: 300px; }
+    }
