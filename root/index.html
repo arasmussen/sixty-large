@@ -9,15 +9,35 @@
     <meta name="description" content="description">
     <meta name="keywords" content="keywords">
     <meta name="author" content="Andrew Rasmussen &amp; Sarah Hum">
-    <meta name="copyright" content="&copy; 2014 Andrew Rasmussen & Sarah Hum">
+    <meta name="copyright" content="&copy; 2014 Andrew Rasmussen &amp; Sarah Hum">
 
     <link rel="icon" type="image/png" href="">
     <link rel="stylesheet" href="css/styles.css">
   </head>
+
   <body>
     <div id="wrapper">
+
       <section id="form">
-        <button id="generate-button" value="">Generate</button>
+        <h1>Generate a wallet for:</h1>
+
+
+        <div class="show-selected">
+
+          <h2>Select a Currency</h2>
+
+          <ul id="currency-select">
+            <li>Bitcoin</li>
+            <li>Litecoin</li>
+            <li>Peercoin</li>
+            <li>Dogecoin</li>
+            <li>Nxt</li>
+          </ul>
+        </div>
+
+        <button value="">Go &#8594;</button>
+
+
         <div class="field">
           <label for="secret">Secret</label>
           <input id="secret" placeholder="A1B2C3" maxlength="64" type="text" readonly />
@@ -31,9 +51,11 @@
           <input id="public" type="text" readonly />
         </div>
       </section>
-    </div>
+    </div> <!-- Close wrapper -->
+
     <script type="text/javascript" src="/js/lib/bitcoinjs-min.js"></script>
     <script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
   </body>
 </html>
+
