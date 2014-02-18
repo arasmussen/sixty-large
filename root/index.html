@@ -24,7 +24,7 @@
 
         <div class="show-selected">
 
-          <h2>Select a Currency</h2>
+          <h2>Bitcoin</h2>
 
           <ul id="currency-select">
             <li>Bitcoin</li>
@@ -37,18 +37,19 @@
 
         <button id="generate-button" value="">Go &#8594;</button>
 
-
-        <div class="field">
-          <label for="secret">Secret</label>
-          <input id="secret" placeholder="A1B2C3" maxlength="64" type="text" readonly />
-        </div>
-        <div class="field private">
-          <label for="private">Private Key</label>
-          <input id="private" type="text" readonly />
-        </div>
-        <div class="field public">
-          <label for="public">Public Address</label>
-          <input id="public" type="text" readonly />
+        <div id="keys">
+          <div class="field secret">
+            <label for="secret">Secret</label>
+            <input id="secret" maxlength="64" type="text" readonly />
+          </div>
+          <div class="field private">
+            <label for="private">Private Key</label>
+            <input id="private" type="text" readonly />
+          </div>
+          <div class="field public">
+            <label for="public">Public Address</label>
+            <input id="public" type="text" readonly />
+          </div>
         </div>
       </section>
     </div> <!-- Close wrapper -->
