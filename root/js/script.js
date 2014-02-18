@@ -1,6 +1,9 @@
 $(function() {
-  var secretInput = $('#secret');
-  secretInput.bind('input', secretKeyChanged);
+  // seed the random number generator
+  rng_seed_time();
+
+  var generateButton = $('#generate-button');
+  generateButton.bind('click', generateNewWallet);
 
   function isValidHex(str) {
     return !/[^0123456789abcdef]+/i.test(str);
@@ -13,15 +16,13 @@ $(function() {
     return str;
   }
 
-  function secretKeyChanged() {
-    var secretKeyHex = $('#secret').val();
-    if (!isValidHex(secretKeyHex)) {
-      console.error('Invalid Secret Key');
-      return;
-    }
+  function generateNewWallet() {
+    var rng = new SecureRandom();
+    var secretKeyBytes = new Array(32);
+    rng.nextBytes(secretKeyBytes);
 
-    secretKeyHex = pad(secretKeyHex, '0', 64);
-    var secretKeyBytes = Crypto.util.hexToBytes(secretKeyHex);
+    var secretKeyHex = Crypto.util.bytesToHex(secretKeyBytes);
+    $('#secret').val(secretKeyHex);
 
     var privateKey = privateKeyFromSecretKey(secretKeyBytes);
     var publicKey = publicKeyFromSecretKey(secretKeyBytes);

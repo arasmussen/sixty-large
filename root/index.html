@@ -1,42 +1,39 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <title>Coin Wallet Generator</title>
+  <head>
+    <title>Coin Wallet Generator</title>
 
-        <meta charset="UTF-8">
-        <meta name="robots" content="index, follow">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="description">
-        <meta name="keywords" content="keywords">
-        <meta name="author" content="Sarah Hum">
-        <meta name="copyright" content="&copy; 2014 Andrew Rasmussen & Sarah Hum">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+    <meta name="author" content="Andrew Rasmussen &amp; Sarah Hum">
+    <meta name="copyright" content="&copy; 2014 Andrew Rasmussen & Sarah Hum">
 
-        <link rel="icon" type="image/png" href="">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <div id="wrapper">
-
-            <section id="form">
-                <button value="">Generate</button>
-
-                <div class="field">
-                    <label for="secret">Secret</label>
-                    <input id="secret" placeholder="A1B2C3" maxlength="64" type="text" />
-                </div>
-                <div class="field private">
-                    <label for="private">Private Key</label>
-                    <input id="private" type="text" />
-                </div>
-                <div class="field public">
-                    <label for="public">Public Address</label>
-                    <input id="public" type="text" />
-                </div>
-            </section>
-        </div> <!-- Close wrapper -->
-
-        <script type="text/javascript" src="/js/lib/bitcoinjs-min.js"></script>
-        <script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
-        <script type="text/javascript" src="/js/script.js"></script>
-    </body>
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <section id="form">
+        <button id="generate-button" value="">Generate</button>
+        <div class="field">
+          <label for="secret">Secret</label>
+          <input id="secret" placeholder="A1B2C3" maxlength="64" type="text" />
+        </div>
+        <div class="field private">
+          <label for="private">Private Key</label>
+          <input id="private" type="text" />
+        </div>
+        <div class="field public">
+          <label for="public">Public Address</label>
+          <input id="public" type="text" />
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript" src="/js/lib/bitcoinjs-min.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+  </body>
 </html>
