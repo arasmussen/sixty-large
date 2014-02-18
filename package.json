@@ -1,0 +1,20 @@
+{
+  "name": "coin",
+  "version": "0.0.0",
+  "description": "Some utilities for crypto currencies. So far just generating wallets.",
+  "main": "server/coin.js",
+  "dependencies": {
+    "requirejs": "~2.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:arasmussen/coin.git"
+  },
+  "author": "Andrew Rasmussen & Sarah Hum",
+  "license": "Closed Source",
+  "readmeFilename": "README"
+}
