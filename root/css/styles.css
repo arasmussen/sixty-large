@@ -142,15 +142,14 @@
     border-radius: 5px;
     z-index: 2;
     opacity: 0;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   }
 
   #coin-selector #currency-list.active {
     opacity: 1;
-    top: 155px;
+    top: 160px;
     visibility: visible;
-    transition: all 0.2s ease-in-out;
   }
 
   #coin-selector #currency-list li {
