@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>Coin Wallet Generator</title>
-
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,33 +9,24 @@
     <meta name="keywords" content="keywords">
     <meta name="author" content="Andrew Rasmussen &amp; Sarah Hum">
     <meta name="copyright" content="&copy; 2014 Andrew Rasmussen &amp; Sarah Hum">
-
     <link rel="icon" type="image/png" href="">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-
   <body>
     <div id="wrapper">
-
       <section id="form">
         <h1>Generate a wallet for:</h1>
-
-
         <div id="coin-selector">
-
-          <h2 class="selected">Bitcoin</h2>
-
+          <h2 id="selected-coin-label">Bitcoin</h2>
           <ul id="currency-list">
-            <li>Bitcoin</li>
+            <li class="selected">Bitcoin</li>
             <li>Litecoin</li>
             <li>Peercoin</li>
             <li>Dogecoin</li>
             <li>Nxt</li>
           </ul>
         </div>
-
         <button id="generate-button" value="Go">Go &#8594;</button>
-
         <div id="keys">
           <div class="field secret">
             <label for="secret">Secret</label>
@@ -52,8 +42,7 @@
           </div>
         </div>
       </section>
-    </div> <!-- Close wrapper -->
-
+    </div>
     <script type="text/javascript" src="/js/lib/bitcoinjs-min.js"></script>
     <script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>

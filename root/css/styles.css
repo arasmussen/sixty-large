@@ -113,11 +113,11 @@
     -ms-user-select: none;
   }
 
-  #coin-selector h2 {
+  #coin-selector #selected-coin-label {
     position: relative;
   }
 
-  #coin-selector h2:after {
+  #coin-selector #selected-coin-label:after {
     position: absolute;
     top: -3px;
     right: 0px;
@@ -130,7 +130,7 @@
     border: 1px solid #f9f9f9;
   }
 
-  #currency-list {
+  #coin-selector #currency-list {
     position: absolute;
     top: 165px;
     left: 0;
@@ -146,19 +146,27 @@
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
   }
 
-  #currency-list.active {
-      opacity: 1;
-      top: 155px;
-      visibility: visible;
-      transition: all 0.2s ease-in-out;
+  #coin-selector #currency-list.active {
+    opacity: 1;
+    top: 155px;
+    visibility: visible;
+    transition: all 0.2s ease-in-out;
   }
 
-  #currency-list li {
-      padding: 15px 30px;
-      transition: all 0.2s ease-in-out;
+  #coin-selector #currency-list li {
+    padding: 15px 30px;
+    transition: all 0.2s ease-in-out;
   }
 
-  #currency-list li:hover { opacity: 0.6; }
+  #coin-selector #currency-list li:hover {
+    opacity: 0.6;
+    background-color: #ddd;
+  }
+
+  #coin-selector #currency-list li.selected {
+    background-color: #ddd;
+    color: #000;
+  }
 
   button {
     position: relative;
