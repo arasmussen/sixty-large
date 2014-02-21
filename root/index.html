@@ -26,22 +26,27 @@
             <li>Nxt</li>
           </ul>
         </div>
-        <button id="generate-button" value="Go">Go &#8594;</button>
+        <button id="generate-button" value="Go">Generate &#8594;</button>
         <div id="keys">
           <div class="field secret">
             <label for="secret">Secret</label>
             <input id="secret" maxlength="64" type="text" spellcheck='false' />
           </div>
-          <div class="field private">
-            <label for="private">Private Key</label>
-            <input id="private" type="text" readonly />
-          </div>
           <div class="field public">
             <label for="public">Public Address</label>
             <input id="public" type="text" readonly />
           </div>
+          <div class="field private">
+            <label for="private">Private Key</label>
+            <input id="private" type="text" readonly />
+          </div>
         </div>
       </section>
+
+      <footer>
+        <hr>
+        <a href="">Contact</a>
+      </footer>
     </div>
     <script type="text/javascript" src="/js/lib/bitcoinjs-min.js"></script>
     <script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
