@@ -40,12 +40,17 @@ $(function() {
     ltc: {
       private: 176,
       public: 48
-    }
+    },
+    doge: {
+      private: 158,
+      public: 30
+    },
   };
 
   var coinToAbbrevMap = {
     Bitcoin: 'btc',
-    Litecoin: 'ltc'
+    Litecoin: 'ltc',
+    Dogecoin: 'doge'
   };
 
   function updatePrefix(coinAbbrev) {
