@@ -37,20 +37,25 @@ $(function() {
       private: 128,
       public: 0
     },
-    ltc: {
-      private: 176,
-      public: 48
-    },
     doge: {
       private: 158,
       public: 30
     },
+    ltc: {
+      private: 176,
+      public: 48
+    },
+    peer: {
+      private: 183,
+      public: 55
+    }
   };
 
   var coinToAbbrevMap = {
     Bitcoin: 'btc',
+    Dogecoin: 'doge',
     Litecoin: 'ltc',
-    Dogecoin: 'doge'
+    Peercoin: 'peer'
   };
 
   function updatePrefix(coinAbbrev) {
