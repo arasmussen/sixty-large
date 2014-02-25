@@ -1,9 +1,11 @@
 define([
+    'coinList',
     'coins',
     'seedRNG',
     'util',
     'walletGenerator'
   ], function(
+    coinList,
     coins,
     seedRNG,
     util,
@@ -14,6 +16,9 @@ define([
       // KEEP THIS AT THE TOP
       seedRNG();
 
+      coinList.init();
+
+      /*
       $('#coin-selector').on('click', function() {
         $('#currency-list').toggleClass('active');
       });
@@ -35,6 +40,7 @@ define([
         updatePrefix(coinName);
         generateWallet();
       });
+      */
 
       function getCoin() {
         var coinName = $('#coin-selector li.selected').html();
@@ -63,6 +69,7 @@ define([
         $('#public').val(wallet.public);
       }
 
+      /*
       var generateButton = $('#generate-button');
       generateButton.bind('click', function() {
         $('#secret').val('');
@@ -71,6 +78,7 @@ define([
 
       var secretKey = $('#secret');
       secretKey.bind('input', generateWallet);
+      */
 
       function updatePrefix(coinName) {
         var coin = coins[coinName];
@@ -83,9 +91,11 @@ define([
         prefix.public = coin.prefixes.public
       }
 
+      /*
       var prefix = {};
       updatePrefix('Bitcoin'); // start with btc by default
       generateWallet(true);
+      */
     };
   }
 );

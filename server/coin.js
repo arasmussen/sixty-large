@@ -28,7 +28,8 @@ requirejs([
     };
 
     var redirects = {
-      '/': {type: 200, name: '/index.html'}
+      '/': {type: 200, name: '/index.html'},
+      '/about': {type: 200, name: '/about.html'}
     };
 
     var keywords = {
