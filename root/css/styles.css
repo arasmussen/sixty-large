@@ -68,26 +68,34 @@ h1 {
 }
 
 header {
+  position: relative;
   width: 100%;
   height: 300px;
   background: #55d55d;
 }
 
+.header-content {
+  width: 960px;
+  margin: 0 auto;
+}
+
 header a h1 {
   position: absolute;
-  top: 50px;
-  width: 100px;
-  height: 100px;
-  background-image: url('/img/sl-logo.svg');
-  background-color: red;
+  top: 50%;
+  margin: -20px 0 0 0;
+  width: 150px;
+  height: 25px;
+  background: url('/img/sl-logo.svg');
+  background-size: 100% 100%;
 }
 
 #coin-list ul {
 }
 
 #coin-list ul li {
+  width: 960px;
+  margin: 0 auto;
   height: 300px;
-  padding: 0 100px;
   background: #232323;
   border-bottom: 1px solid #444;
 }
@@ -97,7 +105,6 @@ header a h1 {
   min-width: 300px;
   font-size: 30px;
   letter-spacing: 1px;
-  background: red;
   display: inline-block;
 }
 
