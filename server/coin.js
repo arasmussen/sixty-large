@@ -24,6 +24,7 @@ requirejs([
       'jpg': {contentType: 'image/jpeg', binary: true},
       'png': {contentType: 'image/png', binary: true},
       'ico': {contentType: 'image/x-icon', binary: true},
+      'svg': {contentType: 'image/svg+xml', binary: true},
       'other': {contentType: 'text/plain', binary: false}
     };
 
