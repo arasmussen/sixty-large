@@ -122,6 +122,13 @@ header a h1 {
   color: #aaa;
 }
 
+#wallet-info span {
+  color: #55d55d;
+  font-family: 'Gentium Book Basic', Georgia, serif;
+  font-size: 20px;
+  display: block;
+}
+
 #page-content footer {
   display: inline-block;
   width: 100%;
