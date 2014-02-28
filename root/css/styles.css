@@ -39,25 +39,24 @@ html, body {
 }
 
 body {
+  overflow: hidden;
 }
 
-body > #wrapper {
-  min-height: 100%;
-  height: auto;
+#wrapper {
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
   line-height: normal;
   word-spacing: normal;
-}
-
-#wrapper {
-  margin: 0 auto;
   width: 100%;
-  height: auto;
+  height: 100%;
   font-family: 'Lato', Helvetica, sans-serif;
   color: #f6f6f6;
-  overflow-y: auto;
+  overflow: hidden;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  padding: 80px 0 0 0;
 }
 
 header {
@@ -98,16 +97,10 @@ p.last, a.last {
   margin: 0 0 30px 0;
 }
 
-#page {
-  position: relative;
-  height: 100%;
-}
-
 #coin-list {
-  position: fixed;
+  float: left;
   width: 300px;
-  max-height: 100%;
-  top: 80px;
+  height: 100%;
   background: #232323;
   display: inline-block;
   -webkit-user-select: none;
@@ -121,7 +114,6 @@ p.last, a.last {
 }
 
 #coin-list ul {
-  margin-bottom: 80px;
   font-family: 'Lato', Helvetica, sans-serif;
 }
 
@@ -136,6 +128,8 @@ p.last, a.last {
   font-weight: 300;
 }
 
+#coin-list li:last-child { border-bottom: none; }
+
 #coin-list li:hover { cursor: pointer; }
 
 #coin-list li span {
@@ -143,18 +137,21 @@ p.last, a.last {
   line-height: 100px;
 }
 
-#page-content {
-  position: relative;
-  width: 100%;
+#page {
   height: 100%;
-  z-index: 0;
+  padding: 0 0 0 300px;
+}
+
+#page-content {
+  height: 100%;
+  overflow-y: auto;
 }
 
 #page-content #wallet-info {
   position: relative;
-  top: 130px;
-  padding: 0 0 0 360px;
-  margin: 0 0 220px 0;
+  top: 50px;
+  padding: 0 0 0 60px;
+  margin: 0 0 120px 0;
 }
 
 #wallet-info h2#coin-label, #wallet-info h2#coin-label span {
@@ -215,7 +212,7 @@ footer a {
 
 #footer-content {
   border-top: 1px solid #e7e7e7;
-  padding: 50px 0 0 360px;
+  padding: 50px 0 0 60px;
 }
 
 #footer-content .left {
@@ -273,18 +270,14 @@ button:active {
   background: #222;
 }
 
-
-/* Let's get this party started */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #444;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #666;
 }
