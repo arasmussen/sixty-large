@@ -122,7 +122,8 @@ p.last, a.last {
   -moz-user-select: none;
   -ms-user-select: none;
   overflow: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 #coin-list ul {
@@ -521,6 +522,7 @@ input[type=text]:focus, textarea:focus { outline: none; }
 
     #page-content {
       overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
     }
 
     #wallet-info h2#coin-label { margin: 0 0 40px 0; }
