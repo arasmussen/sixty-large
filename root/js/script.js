@@ -34,9 +34,13 @@ define([
       function changeSelectedCoin(e) {
         var coinName = e.target.id;
         var coin = coins[coinName];
+        if (coinList.getSelectedCoin() === coin) {
+          return;
+        }
+
         coinList.changeSelectedCoin(coin);
         generateRandomWallet();
-        // TODO update page label
+        $('#coin-label').text(coinName);
       }
       $('#coin-list li').bind('click', changeSelectedCoin);
     };
