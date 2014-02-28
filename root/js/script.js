@@ -28,6 +28,7 @@ define([
         var wallet = walletGenerator.generateWalletFromKey(coin, secretKeyHex);
         $('#public-address').text(wallet.public);
         $('#private-key').text(wallet.private);
+        $('#secret-key').text(secretKeyHex);
       }
       $('#generate-button').bind('click', generateRandomWallet);
 
@@ -43,6 +44,12 @@ define([
         $('#coin-label').text(coinName);
       }
       $('#coin-list li').bind('click', changeSelectedCoin);
+
+      function toggleSecretKey() {
+        var secretDiv = $('#secret-info');
+        secretDiv.css('display', secretDiv.css('display') === 'none' ? 'block' : 'none');
+      }
+      $('#show-secret-key-box').bind('change', toggleSecretKey);
     };
   }
 );

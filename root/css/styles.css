@@ -187,7 +187,9 @@ input[type="checkbox"] {
 
 #private-info { margin: 0 0 50px 0; }
 
-#public-address, #private-key { margin: 0 0 5px 0; }
+#secret-info { display: none; margin: 0 0 30px 0; }
+
+#public-address, #private-key, #secret-key { margin: 0 0 5px 0; }
 
 #page-content footer{
   position: relative;
