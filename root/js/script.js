@@ -50,6 +50,17 @@ define([
         secretDiv.css('display', secretDiv.css('display') === 'none' ? 'block' : 'none');
       }
       $('#show-secret-key-box').bind('change', toggleSecretKey);
+
+      $('#show-list, #coin-list ul li').on('click', function () {
+        $('#coin-list').toggle();
+      });
+
+      $(window).on('resize', function(){
+        $('#coin-list').show();
+      });
+
     };
   }
 );
+
+
