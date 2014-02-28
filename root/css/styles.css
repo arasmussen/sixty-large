@@ -281,7 +281,8 @@ button:active {
   background: #222;
 }
 
-.secret-toggle { display: inline-block; }
+#secret-toggle { display: inline-block; }
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
