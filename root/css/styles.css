@@ -281,6 +281,7 @@ button:active {
   background: #222;
 }
 
+.secret-toggle { display: inline-block; }
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -535,7 +536,11 @@ input[type=text]:focus, textarea:focus { outline: none; }
       word-wrap: break-word;
     }
 
-    .donate-key { width: 100%; }
+    #donate-keys .coin-name { display: block; }
+
+    .coin-name.last { margin: 0 0 10px 0; }
+
+    .donate-key { width: 100%; max-width: 200px; margin: 0 0 30px 0; }
 
     #page { padding: 0; }
   }
