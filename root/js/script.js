@@ -56,7 +56,9 @@ define([
       });
 
       $(window).on('resize', function(){
-        $('#coin-list').show();
+        if ($(window).width() > 479) {
+          $('#coin-list').show();
+        }
       });
 
     };

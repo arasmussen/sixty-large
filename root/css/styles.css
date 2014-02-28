@@ -175,7 +175,6 @@ p.last, a.last {
   font-weight: 300;
   text-transform: uppercase;
   margin: 0 0 70px 0;
-  height: 20px;
 }
 
 #wallet-info h3 {
@@ -510,8 +509,6 @@ input[type=text]:focus, textarea:focus { outline: none; }
   @media only screen and (max-width: 479px) {
     section { width: 300px; }
 
-    #donate-keys { display: none; }
-
     #coin-list { width: 100%; }
 
     #coin-list ul li span, #header-logo h1 { margin-left: 30px; }
@@ -524,6 +521,8 @@ input[type=text]:focus, textarea:focus { outline: none; }
       overflow-x: hidden;
     }
 
+    #wallet-info h2#coin-label { margin: 0 0 40px 0; }
+
     #page-content #wallet-info, #footer-content { padding: 30px; }
 
     input[type="checkbox"] { margin: 10px 5px 0 0; }
@@ -532,9 +531,11 @@ input[type=text]:focus, textarea:focus { outline: none; }
 
     #footer-content .left, #footer-content .right { width: 100%; }
 
-    #public-address, #private-key, #secret-key {
+    #public-address, #private-key, #secret-key, .donate-key {
       word-wrap: break-word;
     }
+
+    .donate-key { width: 100%; }
 
     #page { padding: 0; }
   }
