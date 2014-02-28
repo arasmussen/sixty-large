@@ -35,9 +35,7 @@ define([
         this.coinNames.forEach(function(coinName) {
           var li = '' +
             '<li id="' + coinName + '">' +
-              '<div class="coin-list-item-wrapper">' +
-                '<span>' + coinName + '</span>' +
-              '</div>' +
+              '<span>' + coinName + '</span>' +
             '</li>';
           ul.append(li);
         });
