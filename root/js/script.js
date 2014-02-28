@@ -51,7 +51,7 @@ define([
       }
       $('#show-secret-key-box').bind('change', toggleSecretKey);
 
-      $('#show-list, #coin-list ul li').on('click', function () {
+      $('#list-toggle, #coin-list ul li').on('click', function () {
         $('#coin-list').toggle();
       });
 

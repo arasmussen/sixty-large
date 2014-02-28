@@ -15,7 +15,7 @@
   <body>
     <header>
       <a id="header-logo" href="/"><h1></h1></a>
-      <div id="show-list">hello</div>
+      <div id="list-toggle"></div>
     </header>
     <div id="wrapper">
       <div id="coin-list">
@@ -25,7 +25,7 @@
       <div id="page">
         <div id="page-content">
           <div id="wallet-info">
-            <h2 id="coin-label">Bitcoin <span>Wallet</span></h2>
+            <h2 id="coin-label">Bitcoin</h2>
             <div id="secret-info">
               <span id="secret-key"></span>
               <h3>Secret Key</h3>
@@ -39,8 +39,10 @@
               <h3>Private Key</h3>
             </div>
             <button id="generate-button">GENERATE</button>
-            <input type="checkbox" id="show-secret-key-box" />
-            <h3>Show Secret Key</h3>
+            <div class="secret-toggle">
+              <input type="checkbox" id="show-secret-key-box" />
+              <h3>Show Secret Key</h3>
+            </div>
           </div>
           <footer>
             <div id="footer-content">
