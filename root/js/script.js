@@ -20,20 +20,24 @@ define([
 
       // create coin list
       coinList.init();
-      generateNewRandomWallets();
 
-      function generateNewRandomWallets() {
-        // generate a random secret key
+      function generateRandomWallet() {
+        var coin = coinList.getSelectedCoin();
         var secretKeyHex = secretKeyGenerator.generateRandomHex();
-        if (!util.isValidHex(secretKeyHex)) {
-          console.error('script.js: generated an invalid secret key somehow...');
-          return;
-        }
-        coinList.updateWalletsWithSecretKey(secretKeyHex);
-        $('#secret-key span').val(secretKeyHex);
+        var wallet = walletGenerator.generateWalletFromKey(coin, secretKeyHex);
+        $('#public-address').text(wallet.public);
+        $('#private-key').text(wallet.private);
       }
+      $('#generate-button').bind('click', generateRandomWallet);
 
-      $('#generate-button').bind('click', generateNewRandomWallets);
+      function changeSelectedCoin(e) {
+        var coinName = e.target.id;
+        var coin = coins[coinName];
+        coinList.changeSelectedCoin(coin);
+        generateRandomWallet();
+        // TODO update page label
+      }
+      $('#coin-list li').bind('click', changeSelectedCoin);
     };
   }
 );
