@@ -41,7 +41,7 @@ define([
 
         coinList.changeSelectedCoin(coin);
         generateRandomWallet();
-        $('#coin-label').text(coinName);
+        $('#coin-label').text(coinName + ' wallet');
       }
       $('#coin-list li').bind('click', changeSelectedCoin);
 
