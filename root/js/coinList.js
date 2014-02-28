@@ -29,28 +29,14 @@ define([
           $('#' + coinName + '-wallet .private span').text(wallet.private);
         });
       },
-        
+
       renderCoinList: function() {
         var ul = $('#' + this.containerID + ' ul');
         this.coinNames.forEach(function(coinName) {
           var li = '' +
-            '<li id="' + coinName + '-wallet">' +
-              '<div class="wallet-container">' +
-                '<div class="left">' +
-                  '<h2>' + coinName + '</h2>' +
-                '</div>' +
-                '<div class="right">' +
-                  '<div class="keys">' +
-                    '<div class="public">' +
-                      '<span />' +
-                      '<h3>PUBLIC ADDRESS</h3>' +
-                    '</div>' +
-                    '<div class="private">' +
-                      '<span />' +
-                      '<h3>PRIVATE ADDRESS</h3>' +
-                    '</div>' +
-                  '</div>' +
-                '</div>' +
+            '<li id="' + coinName + '">' +
+              '<div class="coin-list-item-wrapper">' +
+                '<span>' + coinName + '</span>' +
               '</div>' +
             '</li>';
           ul.append(li);
