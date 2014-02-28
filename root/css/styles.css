@@ -28,18 +28,14 @@ a:focus {outline: thin dotted;}
 a:hover, a:active {outline: 0;}
 
 /* Selection */
-::-moz-selection {background: #55fcd5; color: #fff; text-shadow: none;}
-::selection {background: #55fcd5; color: #fff; text-shadow: none;}
+::-moz-selection {background: #aaa; color: #fff; text-shadow: none;}
+::selection {background: #aaa; color: #fff; text-shadow: none;}
 
 /* Basic styles */
 html, body {
   height: 100%;
-  background: #eceee7;
-}
-
-html, body, * {
-    padding: 0;
-    margin: 0;
+  background: #f3f4f0;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -108,7 +104,7 @@ p.last, a.last {
 }
 
 #coin-list {
-  position: absolute;
+  position: fixed;
   width: 300px;
   max-height: 100%;
   top: 80px;
@@ -204,7 +200,7 @@ input[type="checkbox"] {
   position: relative;
   display: inline-block;
   width: 100%;
-  color: #bbb;
+  color: #aaa;
 }
 
 footer a {
@@ -213,12 +209,12 @@ footer a {
 
 #page-content footer #copyright {
   font-size: 10px;
-  color: #ccc;
+  color: #bbb;
   margin: 30px 0 20px 0;
 }
 
 #footer-content {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e7e7e7;
   padding: 50px 0 0 360px;
 }
 
