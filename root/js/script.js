@@ -52,7 +52,9 @@ define([
       $('#show-secret-key-box').bind('change', toggleSecretKey);
 
       $('#list-toggle, #coin-list ul li').on('click', function () {
-        $('#coin-list').toggle();
+        if ($(window).width() < 479) {
+          $('#coin-list').toggle();
+        }
       });
 
       $(window).on('resize', function(){
