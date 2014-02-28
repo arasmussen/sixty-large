@@ -15,29 +15,32 @@
   <body>
     <div id="wrapper">
       <header>
-        <div class="header-content">
-          <a href="/"><h1></h1></a>
-          <button id="generate-button">GENERATE</button>
-          <p id="secret-key">SECRET KEY: <span></span></p>
-        </div>
+        <a id="header-logo" href="/"><h1></h1></a>
       </header>
       <div id="coin-list">
         <ul>
         </ul>
       </div>
-      <div id="generate-form">
-      </div>
-      <footer>
-        <a href="/about">about</a>
-        <a href="mailto:andrew@venz.io">contact</a>
-        <div id="donate-keys">
-          <ul>
-            <li>Bitcoin: 1F1f9TcJam2CZG5uvDKewJGsrhsyP7awUP</li>
-            <li>Litecoin: Lg6KvK8gLts9jY34PnXnLnTyNFZyN5jpST</li>
-            <li>Dogecoin: D7Ruq8EXekDU9p6R3PCZx8Zfqobf9vToBy</li>
-          </ul>
+      <div id="page">
+        <div id="page-content">
+          <button id="generate-button">GENERATE</button>
+          <label for="public-address">PUBLIC ADDRESS</label>
+          <span id="public-address"></span>
+          <label for="private-key">PRIVATE KEY</label>
+          <span id="private-key"></span>
         </div>
-      </footer>
+        <footer>
+          <a href="/about">about</a>
+          <a href="mailto:andrew@venz.io">contact</a>
+          <div id="donate-keys">
+            <ul>
+              <li>Bitcoin: 1F1f9TcJam2CZG5uvDKewJGsrhsyP7awUP</li>
+              <li>Litecoin: Lg6KvK8gLts9jY34PnXnLnTyNFZyN5jpST</li>
+              <li>Dogecoin: D7Ruq8EXekDU9p6R3PCZx8Zfqobf9vToBy</li>
+            </ul>
+          </div>
+        </footer>
+      </div>
     </div>
     <script type="text/javascript" src="/js/lib/bitcoinjs-min.js"></script>
     <script type="text/javascript" src="/js/lib/jquery-2.1.0.min.js"></script>
