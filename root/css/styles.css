@@ -75,6 +75,20 @@ header a h1 {
   background-size: 100% 100%;
 }
 
+h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 0 0 25px 0;
+}
+
+p, a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
 #coin-list {
   position: relative;
   top: 80px;
@@ -83,6 +97,9 @@ header a h1 {
   background: #232323;
   display: inline-block;
   z-index: 1;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 }
 
 #coin-list li {
@@ -113,7 +130,17 @@ header a h1 {
 }
 
 #page-content #wallet-info {
-  padding: 0 0 0 350px;
+  padding: 0 0 0 400px;
+  margin: 0 0 100px 0;
+}
+
+#wallet-info h2#coin-label {
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #232323;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 70px 0 50px 0;
 }
 
 #wallet-info h3 {
@@ -129,11 +156,55 @@ header a h1 {
   display: block;
 }
 
-#page-content footer {
+#public-info, #private-info { margin: 0 0 50px 0; }
+
+#page-content footer{
+  position: relative;
   display: inline-block;
   width: 100%;
-  padding: 0 0 0 350px;
-  background-color: #af3;
+  height: 300px;
+  color: #bbb;
+}
+
+footer a {
+  color: #bbb;
+}
+
+#page-content footer #copyright {
+  font-size: 10px;
+  color: #ccc;
+  margin: 50px 0 0 0;
+}
+
+#footer-content {
+  border-top: 1px solid #eee;
+  padding: 50px 0 0 400px;
+}
+
+#footer-content .left {
+  margin: 0 8% 0 0;
+  max-width: 300px;
+}
+
+#footer-content .right {
+  min-width: 400px;
+}
+
+#footer-content .left, #footer-content .right {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  }
+
+#donate-keys .coin-name {
+  width: 80px;
+  display: inline-block;
+}
+
+#donate-keys .donate-key {
+  font-family: 'Gentium Book Basic', Georgia, serif;
+  color: #55d55d;
+  display: inline-block;
 }
 
 button {
