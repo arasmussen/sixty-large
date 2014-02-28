@@ -20,7 +20,7 @@ define([
 
       // create coin list
       coinList.init();
-      // generateRandomWallet();
+      generateRandomWallet();
 
       function generateRandomWallet() {
         var coin = coinList.getSelectedCoin();
