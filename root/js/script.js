@@ -32,8 +32,8 @@ define([
       }
       $('#generate-button').bind('click', generateRandomWallet);
 
-      function changeSelectedCoin(e) {
-        var coinName = e.target.id;
+      function changeSelectedCoin() {
+        var coinName = this.id;
         var coin = coins[coinName];
         if (coinList.getSelectedCoin() === coin) {
           return;
