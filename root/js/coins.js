@@ -1,5 +1,12 @@
 define(function() {
   return {
+    Auroracoin: {
+      abbrev: 'aur',
+      prefixes: {
+        private: 151,
+        public: 23
+      }
+    },
     Bbqcoin: {
       abbrev: 'bbq',
       prefixes: {
