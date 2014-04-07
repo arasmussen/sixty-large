@@ -53,6 +53,14 @@ body {
   overflow-x: auto;
 }
 
+.gift {
+  padding: 80px 0 0 0;
+}
+
+.gift * {
+  color: #000;
+}
+
 header {
   position: fixed;
   top: 0px;
